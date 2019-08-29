@@ -60,5 +60,15 @@ namespace Calculator_Test_Unit
             Assert.That(uut.Power(3, 3), Is.EqualTo(27));
         }
 
+        [Test]
+        public void SqrtCalculator_Test()
+        {
+            //Arrange
+            //Act
+            uut.sqrt(9);
+            //Assert
+            Assert.That(uut.sqrt(9), Is.EqualTo(3));
+        }
+
     }
 }
