@@ -50,15 +50,19 @@ namespace Calculator_Test_Unit
         }
 
 
-        [Test]
-        public void PowerCalculator_Test()
+        [TestCase(3,3,27)]
+        [TestCase(-3, -3, -0.037037037037037035)]
+        [TestCase(0, 0, 1)]
+        public void PowerCalculator_Test(double a, double b, double c)
         {
             //Arrange
             //Act
-            uut.Power(3, 3);
+            uut.Power(a, b);
             //Assert
-            Assert.That(uut.Power(3, 3), Is.EqualTo(27));
+            Assert.That(uut.Power(a, b), Is.EqualTo(c));
         }
+
+
 
         [Test]
         public void SqrtCalculator_Test()
