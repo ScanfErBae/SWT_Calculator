@@ -27,6 +27,11 @@ public class Calc
         return Math.Pow(x, exp);
     }
 
+    public double sqrt(double x)
+    {
+        return Math.Sqrt(x);
+    }
+
 }
 
 namespace Calculator
@@ -41,6 +46,7 @@ namespace Calculator
             Console.WriteLine(test.Sub(4,2 ));
             Console.WriteLine(test.Multi(3, 3));
             Console.WriteLine(test.Power(3, 3));
+            Console.WriteLine(test.sqrt(9));
 
         }
     }
