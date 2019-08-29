@@ -9,22 +9,33 @@ public class Calc
 {
     public double Add(double a, double b)
     {
-        return a + b;
+        Accumulator = a + b;
+        return Accumulator;
     }
 
     public double Sub(double a, double b)
     {
-        return a - b;
+        Accumulator = a - b;
+        return Accumulator;
     }
 
     public double Multi(double a, double b)
     {
-        return a * b;
+        Accumulator = a * b;
+        return Accumulator;
     }
 
     public double Power(double x, double exp)
     {
-        return Math.Pow(x, exp);
+        Accumulator = Math.Pow(x, exp);
+        return Accumulator;
+    }
+
+    public double Accumulator { get; private set; }
+
+    public void Clear()
+    {
+        Accumulator = 0.0;
     }
 
     public double sqrt(double x)
