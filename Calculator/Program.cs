@@ -31,6 +31,12 @@ public class Calc
         return Accumulator;
     }
 
+    public double Divide(double dividend, double divisor)
+    {
+        Accumulator = dividend / divisor;
+        return Accumulator;
+    }
+
     public double Accumulator { get; private set; }
 
     public void Clear()
@@ -40,7 +46,38 @@ public class Calc
 
     public double Sqrt(double x)
     {
-        return Math.Sqrt(x);
+        Accumulator = Math.Sqrt(x);
+        return Accumulator;
+    }
+
+    public double Add(double addend)
+    {
+        Accumulator += addend;
+        return Accumulator;
+    }
+
+    public double Subtract(double subtractor)
+    {
+        Accumulator -= subtractor;
+        return Accumulator;
+    }
+
+    public double Multiply(double multiplier)
+    {
+        Accumulator *= multiplier;
+        return Accumulator;
+    }
+
+    public double Divide(double divisor)
+    {
+        Accumulator /= divisor;
+        return Accumulator;
+    }
+
+    public double Power(double exponent)
+    {
+        Accumulator = Math.Pow(Accumulator, exponent);
+        return Accumulator;
     }
 
 }
@@ -54,7 +91,7 @@ namespace Calculator
 
             Calc test = new Calc();
             Console.WriteLine(test.Add(2, 2));
-            Console.WriteLine(test.Sub(4,2 ));
+            Console.WriteLine(test.Sub(4, 2));
             Console.WriteLine(test.Multi(3, 3));
             Console.WriteLine(test.Power(3, 3));
             Console.WriteLine(test.Sqrt(9));
