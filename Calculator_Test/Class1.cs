@@ -78,9 +78,9 @@ namespace Calculator_Test_Unit
         {
             //Arrange
             //Act
-            uut.sqrt(9);
+            uut.Sqrt(9);
             //Assert
-            Assert.That(uut.sqrt(9), Is.EqualTo(3));
+            Assert.That(uut.Sqrt(9), Is.EqualTo(3));
         }
 
     }
