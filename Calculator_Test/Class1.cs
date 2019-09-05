@@ -18,14 +18,32 @@ namespace Calculator_Test_Unit
            uut = new Calc();
         }
 
-        [Test]
-        public void addCalculator_Test()
+        [TestCase(2,2,4)]
+        [TestCase(4,4,8)]
+        [TestCase(10,10,20)]
+        [TestCase(27, 13, 40)]
+        [TestCase(-10,-5,-15)]
+        public void addCalculator_Test(double a, double b, double c)
         {
             //Arrange
             //Act
-            uut.Add(2,2);
+            uut.Add(a,b);
             //Assert
-            Assert.That(uut.Add(2,2), Is.EqualTo(4));
+            Assert.That(uut.Add(a,b), Is.EqualTo(c));
+        }
+
+
+        [TestCase(4, 2, 2)]
+        [TestCase(8, 3, 5)]
+        [TestCase(10, 10, 0)]
+        [TestCase(50, 60, -10)]
+        public void SubCalculator_Test(double a, double b, double c)
+        {
+            //Arrange
+            //Act
+            uut.Sub(a, b);
+            //Assert
+            Assert.That(uut.Sub(a, b), Is.EqualTo(c));
         }
 
         [Test]
@@ -39,15 +57,6 @@ namespace Calculator_Test_Unit
         }
 
 
-        [Test]
-        public void SubCalculator_Test()
-        {
-            //Arrange
-            //Act
-            uut.Sub(5, 3);
-            //Assert
-            Assert.That(uut.Sub(5, 3), Is.EqualTo(2));
-        }
 
 
         [TestCase(3,3,27)]
