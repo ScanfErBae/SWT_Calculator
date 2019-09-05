@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Calculator_Test_Unit
+namespace Calculator
 {     
 [TestFixture]
     public class Class1
