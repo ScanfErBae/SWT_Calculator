@@ -38,7 +38,7 @@ public class Calc
         Accumulator = 0.0;
     }
 
-    public double sqrt(double x)
+    public double Sqrt(double x)
     {
         return Math.Sqrt(x);
     }
@@ -57,7 +57,7 @@ namespace Calculator
             Console.WriteLine(test.Sub(4,2 ));
             Console.WriteLine(test.Multi(3, 3));
             Console.WriteLine(test.Power(3, 3));
-            Console.WriteLine(test.sqrt(9));
+            Console.WriteLine(test.Sqrt(9));
 
         }
     }

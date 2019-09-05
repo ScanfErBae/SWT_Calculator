@@ -19,7 +19,6 @@ namespace Calculator_Test_Unit
         }
 
         [TestCase(2,2,4)]
-        [TestCase(4,4,8)]
         [TestCase(10,10,20)]
         [TestCase(27, 13, 40)]
         [TestCase(-10,-5,-15)]
@@ -46,14 +45,17 @@ namespace Calculator_Test_Unit
             Assert.That(uut.Sub(a, b), Is.EqualTo(c));
         }
 
-        [Test]
-        public void MultiCalculator_Test()
+        [TestCase(4, 4, 16)]
+        [TestCase(2,5, 10)]
+        [TestCase(10, 10, 100)]
+        [TestCase(-7, -3, 21)]
+        public void MultiCalculator_Test(double a, double b, double c)
         {
             //Arrange
             //Act
-            uut.Multi(3, 3);
+            uut.Multi(a, b);
             //Assert
-            Assert.That(uut.Multi(3, 3), Is.EqualTo(9));
+            Assert.That(uut.Multi(a, b), Is.EqualTo(c));
         }
 
 
@@ -62,6 +64,7 @@ namespace Calculator_Test_Unit
         [TestCase(3,3,27)]
         [TestCase(-3, -3, -0.037037037037037035)]
         [TestCase(0, 0, 1)]
+        [TestCase(-4, 2, 16)]
         public void PowerCalculator_Test(double a, double b, double c)
         {
             //Arrange
@@ -72,15 +75,17 @@ namespace Calculator_Test_Unit
         }
 
 
-
-        [Test]
-        public void SqrtCalculator_Test()
+        [TestCase(9,3)]
+        [TestCase(4,2)]
+        [TestCase(16,4)]
+        [TestCase(42, 6.4807406984078604)]
+        public void SqrtCalculator_Test(double a, double b)
         {
             //Arrange
             //Act
-            uut.sqrt(9);
+            uut.Sqrt(a);
             //Assert
-            Assert.That(uut.sqrt(9), Is.EqualTo(3));
+            Assert.That(uut.Sqrt(a), Is.EqualTo(b));
         }
 
     }
