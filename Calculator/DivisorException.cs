@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class DivisorException : Exception
+    public class DivisorException : Exception
     {
         public double Divisor { get; private set; }
 

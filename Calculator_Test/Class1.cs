@@ -88,5 +88,27 @@ namespace Calculator
             Assert.That(uut.Sqrt(a), Is.EqualTo(b));
         }
 
+        [TestCase(5,0)]
+        [TestCase(-12, 0)]
+        [TestCase(61, 0)]
+        public void TestThatExceptionThrownWhenDividingByZero(double a, double b)
+        {
+            //Arrange
+            //Act
+            //Assert
+            Assert.Throws<DivisorException>(() => uut.Divide(a, b));
+        }
+
+        [TestCase(-7,0)]
+        [TestCase(2,0)]
+        [TestCase(1,0)]
+        public void TestThatExceptionThrownWhenDividingByZeroUsingAccumulator(double a, double b)
+        {
+            //Arrange
+            //Act
+            uut.Add(a, b);
+            //Assert
+            Assert.Throws<DivisorException>(() => uut.Divide(b));
+        }
     }
 }

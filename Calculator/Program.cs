@@ -72,6 +72,7 @@ namespace Calculator
 
         public double Divide(double divisor)
         {
+            if (divisor == 0) throw new DivisorException(divisor);
             Accumulator /= divisor;
             return Accumulator;
         }
