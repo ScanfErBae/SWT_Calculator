@@ -124,6 +124,9 @@ namespace Calculator
             Assert.That(uut.Accumulator, Is.EqualTo(c));
         }
 
+        [TestCase(-76, 0)]
+        [TestCase(62, 0)]
+        [TestCase(7, 0)]
         public void TestThatExceptionThrownWhenDividingByZero(double a, double b)
         {
             //Arrange
